@@ -1,0 +1,280 @@
+<!-- assignments.html - Assignments and Projects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - CS-405 Django University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .assignment-card {
+            transition: all 0.3s ease;
+        }
+        .assignment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased pb-20">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-800 rounded-lg flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">Django<span class="gradient-text">University</span></span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider">CS-405: Web Frameworks</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Overview</a>
+                    <a href="syllabus.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Syllabus</a>
+                    <a href="lessons/index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Lessons</a>
+                    <a href="assignments.html" class="text-sm font-medium text-white border-b-2 border-blue-500">Assignments</a>
+                    <a href="resources.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Resources</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-4">Assignments</h1>
+            <p class="text-gray-400 text-lg">Projects and assessments for CS-405</p>
+        </div>
+
+        <!-- Progress Overview -->
+        <div class="glass rounded-xl p-6 border border-white/10 mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-semibold">Your Progress</h2>
+                <span class="text-2xl font-bold gradient-text">25%</span>
+            </div>
+            <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden mb-4">
+                <div class="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" style="width: 25%"></div>
+            </div>
+            <div class="flex justify-between text-sm text-gray-400">
+                <span>1 of 4 assignments submitted</span>
+                <span>Current Grade: A-</span>
+            </div>
+        </div>
+
+        <!-- Assignments Grid -->
+        <div class="grid gap-6">
+            <!-- Assignment 1 -->
+            <div class="assignment-card glass rounded-xl p-8 border border-white/10 border-l-4 border-l-green-500">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-lg bg-green-500/20 flex items-center justify-center">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs font-medium">Completed</span>
+                                <span class="text-gray-500 text-sm">Due: March 20, 2026</span>
+                            </div>
+                            <h3 class="text-2xl font-bold">Assignment 1: Blog Application</h3>
+                            <p class="text-gray-400 mt-1">Build a basic blog with posts, comments, and user authentication</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-3xl font-bold text-green-400">92%</p>
+                        <p class="text-sm text-gray-500">Grade Received</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <p class="text-sm text-gray-400 mb-1">Weight</p>
+                        <p class="font-semibold">10% of final grade</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <p class="text-sm text-gray-400 mb-1">Submission</p>
+                        <p class="font-semibold text-green-400">Submitted on time</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <p class="text-sm text-gray-400 mb-1">Feedback</p>
+                        <p class="font-semibold">View Comments</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button class="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors text-sm font-medium">
+                        View Submission
+                    </button>
+                    <button class="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors text-sm font-medium">
+                        View Solution
+                    </button>
+                </div>
+            </div>
+
+            <!-- Assignment 2 -->
+            <div class="assignment-card glass rounded-xl p-8 border border-white/10 border-l-4 border-l-blue-500">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                            <i data-lucide="clock" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs font-medium">In Progress</span>
+                                <span class="text-gray-500 text-sm">Due: April 10, 2026</span>
+                            </div>
+                            <h3 class="text-2xl font-bold">Assignment 2: E-Commerce API</h3>
+                            <p class="text-gray-400 mt-1">RESTful API for product catalog, cart, and orders using Django REST Framework</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-3xl font-bold text-gray-600">--</p>
+                        <p class="text-sm text-gray-500">Not Graded</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <p class="text-sm text-gray-400 mb-1">Weight</p>
+                        <p class="font-semibold">15% of final grade</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <p class="text-sm text-gray-400 mb-1">Time Remaining</p>
+                        <p class="font-semibold text-blue-400">12 days left</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <p class="text-sm text-gray-400 mb-1">GitHub Repo</p>
+                        <p class="font-semibold text-blue-400">Connected</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-sm font-medium">
+                        Continue Working
+                    </button>
+                    <button class="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors text-sm font-medium">
+                        View Requirements
+                    </button>
+                    <button class="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors text-sm font-medium">
+                        Starter Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- Assignment 3 -->
+            <div class="assignment-card glass rounded-xl p-8 border border-white/10 border-l-4 border-l-gray-600 opacity-75">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-lg bg-gray-700 flex items-center justify-center">
+                            <i data-lucide="lock" class="w-8 h-8 text-gray-500"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs font-medium">Locked</span>
+                                <span class="text-gray-500 text-sm">Due: May 1, 2026</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-400">Midterm Project: Social Network</h3>
+                            <p class="text-gray-500 mt-1">Full-stack application with real-time features and advanced queries</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-3xl font-bold text-gray-700">--</p>
+                        <p class="text-sm text-gray-600">Not Started</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 4 -->
+            <div class="assignment-card glass rounded-xl p-8 border border-white/10 border-l-4 border-l-gray-600 opacity-75">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-lg bg-gray-700 flex items-center justify-center">
+                            <i data-lucide="lock" class="w-8 h-8 text-gray-500"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs font-medium">Locked</span>
+                                <span class="text-gray-500 text-sm">Due: May 20, 2026</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-400">Final Project: Production Deployment</h3>
+                            <p class="text-gray-500 mt-1">Deploy scalable application with CI/CD, testing, and monitoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submission Guidelines -->
+        <div class="mt-12 glass rounded-xl p-8 border border-white/10">
+            <h2 class="text-2xl font-bold mb-6">Submission Guidelines</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i data-lucide="git-branch" class="w-5 h-5 text-blue-400"></i>
+                        Git Workflow
+                    </h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span>Fork the assignment repository from GitHub Classroom</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span>Create feature branches for major components</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span>Commit regularly with descriptive messages</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-400 mt-1">•</span>
+                            <span>Push to main branch before deadline</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i data-lucide="clipboard-check" class="w-5 h-5 text-purple-400"></i>
+                        Requirements
+                    </h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-400 mt-1">•</span>
+                            <span>Include README with setup instructions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-400 mt-1">•</span>
+                            <span>Write tests (minimum 80% coverage)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-400 mt-1">•</span>
+                            <span>Follow PEP 8 style guidelines</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-400 mt-1">•</span>
+                            <span>Include requirements.txt and .env.example</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

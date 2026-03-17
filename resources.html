@@ -1,0 +1,329 @@
+<!-- resources.html - Documentation and Resources -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - CS-405 Django University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .doc-card {
+            transition: all 0.3s ease;
+        }
+        .doc-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased pb-20">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-800 rounded-lg flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">Django<span class="gradient-text">University</span></span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider">CS-405: Web Frameworks</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Overview</a>
+                    <a href="syllabus.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Syllabus</a>
+                    <a href="lessons/index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Lessons</a>
+                    <a href="assignments.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Assignments</a>
+                    <a href="resources.html" class="text-sm font-medium text-white border-b-2 border-blue-500">Resources</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-4">Course Resources</h1>
+            <p class="text-gray-400 text-lg">Essential documentation, tools, and reference materials</p>
+        </div>
+
+        <!-- Official Documentation -->
+        <section id="documentation" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="book-open" class="w-6 h-6 text-blue-400"></i>
+                Official Documentation
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://docs.djangoproject.com/en/5.0/" target="_blank" class="doc-card glass rounded-xl p-6 border border-white/10 block group">
+                    <div class="w-12 h-12 rounded-lg bg-green-600/20 flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                        <i data-lucide="file-text" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors">Django Documentation</h3>
+                    <p class="text-sm text-gray-400 mb-4">Official comprehensive documentation for Django 5.0</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <span>docs.djangoproject.com</span>
+                    </div>
+                </a>
+
+                <a href="https://www.django-rest-framework.org/" target="_blank" class="doc-card glass rounded-xl p-6 border border-white/10 block group">
+                    <div class="w-12 h-12 rounded-lg bg-red-600/20 flex items-center justify-center mb-4 group-hover:bg-red-600/30 transition-colors">
+                        <i data-lucide="api" class="w-6 h-6 text-red-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-red-400 transition-colors">Django REST Framework</h3>
+                    <p class="text-sm text-gray-400 mb-4">Powerful and flexible toolkit for building Web APIs</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <span>django-rest-framework.org</span>
+                    </div>
+                </a>
+
+                <a href="https://docs.python.org/3/" target="_blank" class="doc-card glass rounded-xl p-6 border border-white/10 block group">
+                    <div class="w-12 h-12 rounded-lg bg-blue-600/20 flex items-center justify-center mb-4 group-hover:bg-blue-600/30 transition-colors">
+                        <i data-lucide="code-2" class="w-6 h-6 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">Python Documentation</h3>
+                    <p class="text-sm text-gray-400 mb-4">Official Python 3.x documentation and tutorials</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <span>docs.python.org</span>
+                    </div>
+                </a>
+
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django" target="_blank" class="doc-card glass rounded-xl p-6 border border-white/10 block group">
+                    <div class="w-12 h-12 rounded-lg bg-purple-600/20 flex items-center justify-center mb-4 group-hover:bg-purple-600/30 transition-colors">
+                        <i data-lucide="globe" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors">MDN Django Guide</h3>
+                    <p class="text-sm text-gray-400 mb-4">Mozilla's comprehensive Django learning pathway</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <span>developer.mozilla.org</span>
+                    </div>
+                </a>
+
+                <a href="https://wsvincent.com/best-django-tutorials/" target="_blank" class="doc-card glass rounded-xl p-6 border border-white/10 block group">
+                    <div class="w-12 h-12 rounded-lg bg-amber-600/20 flex items-center justify-center mb-4 group-hover:bg-amber-600/30 transition-colors">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-amber-400 transition-colors">Django Learning Resources</h3>
+                    <p class="text-sm text-gray-400 mb-4">Curated list of tutorials and learning materials</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <span>wsvincent.com</span>
+                    </div>
+                </a>
+
+                <a href="https://cheat.sh/django" target="_blank" class="doc-card glass rounded-xl p-6 border border-white/10 block group">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-600/20 flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-colors">
+                        <i data-lucide="terminal" class="w-6 h-6 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Cheat.sh Django</h3>
+                    <p class="text-sm text-gray-400 mb-4">Command line cheat sheet for Django commands</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                        <span>cheat.sh</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Development Tools -->
+        <section id="tools" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="wrench" class="w-6 h-6 text-purple-400"></i>
+                Development Tools
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-xl p-6 border border-white/10">
+                    <h3 class="text-lg font-semibold mb-4">Required Software</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="code" class="w-5 h-5 text-blue-400"></i>
+                                <div>
+                                    <p class="font-medium">Python 3.10+</p>
+                                    <p class="text-xs text-gray-500">Programming language runtime</p>
+                                </div>
+                            </div>
+                            <a href="https://www.python.org/downloads/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">Download</a>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="box" class="w-5 h-5 text-green-400"></i>
+                                <div>
+                                    <p class="font-medium">Django 5.0</p>
+                                    <p class="text-xs text-gray-500">Web framework (pip install django)</p>
+                                </div>
+                            </div>
+                            <a href="https://www.djangoproject.com/download/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">Install</a>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="database" class="w-5 h-5 text-purple-400"></i>
+                                <div>
+                                    <p class="font-medium">PostgreSQL 14+</p>
+                                    <p class="text-xs text-gray-500">Recommended production database</p>
+                                </div>
+                            </div>
+                            <a href="https://www.postgresql.org/download/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass rounded-xl p-6 border border-white/10">
+                    <h3 class="text-lg font-semibold mb-4">Recommended IDEs</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="layout" class="w-5 h-5 text-blue-400"></i>
+                                <div>
+                                    <p class="font-medium">PyCharm Professional</p>
+                                    <p class="text-xs text-gray-500">Free for students (JetBrains)</p>
+                                </div>
+                            </div>
+                            <a href="https://www.jetbrains.com/pycharm/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">Get License</a>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i>
+                                <div>
+                                    <p class="font-medium">VS Code</p>
+                                    <p class="text-xs text-gray-500">With Python/Django extensions</p>
+                                </div>
+                            </div>
+                            <a href="https://code.visualstudio.com/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">Download</a>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="container" class="w-5 h-5 text-blue-400"></i>
+                                <div>
+                                    <p class="font-medium">Docker Desktop</p>
+                                    <p class="text-xs text-gray-500">For containerized development</p>
+                                </div>
+                            </div>
+                            <a href="https://www.docker.com/products/docker-desktop/" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Materials -->
+        <section id="reading" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="book" class="w-6 h-6 text-emerald-400"></i>
+                Reading Materials
+            </h2>
+
+            <div class="glass rounded-xl p-8 border border-white/10">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-emerald-400">Required Textbook</h3>
+                        <div class="flex gap-4 p-4 bg-white/5 rounded-lg">
+                            <div class="w-24 h-32 bg-gradient-to-br from-emerald-600 to-teal-800 rounded flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold mb-1">Two Scoops of Django 3.x</p>
+                                <p class="text-sm text-gray-400 mb-2">by Daniel Roy Greenfeld & Audrey Roy Greenfeld</p>
+                                <p class="text-xs text-gray-500">Best practices for Django development</p>
+                                <a href="#" class="text-emerald-400 text-sm mt-2 inline-block hover:underline">University Library →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 text-blue-400">Supplementary Reading</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="file-text" class="w-5 h-5 text-gray-400 mt-0.5"></i>
+                                <div>
+                                    <p class="font-medium">Django for Professionals</p>
+                                    <p class="text-sm text-gray-500">William S. Vincent</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="file-text" class="w-5 h-5 text-gray-400 mt-0.5"></i>
+                                <div>
+                                    <p class="font-medium">High Performance Django</p>
+                                    <p class="text-sm text-gray-500">Peter Baumgartner & Yann Malet</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="file-text" class="w-5 h-5 text-gray-400 mt-0.5"></i>
+                                <div>
+                                    <p class="font-medium">Test-Driven Development with Python</p>
+                                    <p class="text-sm text-gray-500">Harry J.W. Percival</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Repository -->
+        <section id="code" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="github" class="w-6 h-6 text-gray-400"></i>
+                Code Repository
+            </h2>
+
+            <div class="glass rounded-xl p-6 border border-white/10">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">GitHub Classroom</h3>
+                        <p class="text-gray-400">All course code, assignments, and examples</p>
+                    </div>
+                    <a href="#" class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-medium transition-colors flex items-center gap-2">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                        Access Repository
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <i data-lucide="folder" class="w-5 h-5 text-blue-400 mb-2"></i>
+                        <p class="font-medium text-sm">lecture-examples/</p>
+                        <p class="text-xs text-gray-500 mt-1">Code from each lecture</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <i data-lucide="folder" class="w-5 h-5 text-purple-400 mb-2"></i>
+                        <p class="font-medium text-sm">assignments/</p>
+                        <p class="text-xs text-gray-500 mt-1">Starter code for projects</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-lg">
+                        <i data-lucide="folder" class="w-5 h-5 text-green-400 mb-2"></i>
+                        <p class="font-medium text-sm">solutions/</p>
+                        <p class="text-xs text-gray-500 mt-1">Reference solutions (post-deadline)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

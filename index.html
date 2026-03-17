@@ -1,0 +1,499 @@
+<!-- index.html - Main Landing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django University - Academic Web Development Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #0f172a; 
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .academic-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .academic-card:hover {
+            border-left-color: #3b82f6;
+            transform: translateX(8px);
+        }
+        .syllabus-week {
+            transition: all 0.3s ease;
+        }
+        .syllabus-week:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+        .doc-link {
+            transition: all 0.2s;
+        }
+        .doc-link:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
+        .lesson-progress {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-800 rounded-lg flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">Django<span class="gradient-text">University</span></span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider">CS-405: Web Frameworks</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-white border-b-2 border-blue-500">Overview</a>
+                    <a href="syllabus.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Syllabus</a>
+                    <a href="lessons/index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Lessons</a>
+                    <a href="assignments.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Assignments</a>
+                    <a href="resources.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Resources</a>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-medium">Spring 2026</span>
+                    </div>
+                </div>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass border-t border-white/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-white bg-white/10 rounded-lg">Overview</a>
+                <a href="syllabus.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Syllabus</a>
+                <a href="lessons/index.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Lessons</a>
+                <a href="assignments.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Assignments</a>
+                <a href="resources.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
+                    <i data-lucide="book-open" class="w-4 h-4 text-blue-400"></i>
+                    <span class="text-sm font-medium text-blue-400">Computer Science Department</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    CS-405: <br>
+                    <span class="gradient-text">Web Development</span><br>
+                    with Django
+                </h1>
+                
+                <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                    A comprehensive university-level course covering Django framework architecture, 
+                    ORM, REST APIs, and production deployment. 3 Credits • Undergraduate/Graduate
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg border border-white/10">
+                        <i data-lucide="clock" class="w-4 h-4 text-gray-400"></i>
+                        <span class="text-sm">MWF 10:00-11:30 AM</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg border border-white/10">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-gray-400"></i>
+                        <span class="text-sm">Tech Building 304</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg border border-white/10">
+                        <i data-lucide="users" class="w-4 h-4 text-gray-400"></i>
+                        <span class="text-sm">45 Students</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="lessons/module1/lesson1.html" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all flex items-center gap-2">
+                        <i data-lucide="play" class="w-5 h-5"></i>
+                        Start Learning
+                    </a>
+                    <a href="syllabus.html" class="px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/5 transition-all flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                        View Syllabus
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-3xl"></div>
+                <div class="relative glass rounded-2xl p-8 border border-white/10">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold">Course Progress</h3>
+                        <span class="text-2xl font-bold gradient-text">0%</span>
+                    </div>
+                    
+                    <div class="w-full h-3 bg-white/10 rounded-full mb-6 overflow-hidden">
+                        <div class="h-full lesson-progress rounded-full" style="width: 0%"></div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Week 1</p>
+                                    <p class="text-sm text-gray-400">Introduction & Setup</p>
+                                </div>
+                            </div>
+                            <span class="text-sm text-green-400">Completed</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-blue-500/30">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                                    <i data-lucide="play-circle" class="w-5 h-5 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Week 2</p>
+                                    <p class="text-sm text-gray-400">Models & ORM</p>
+                                </div>
+                            </div>
+                            <span class="text-sm text-purple-400">In Progress</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg opacity-50">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
+                                    <i data-lucide="lock" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Week 3</p>
+                                    <p class="text-sm text-gray-400">Views & Templates</p>
+                                </div>
+                            </div>
+                            <span class="text-sm text-gray-500">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-400">Next Assignment</span>
+                            <span class="text-blue-400">Due in 3 days</span>
+                        </div>
+                        <p class="mt-2 font-medium">Project 1: Blog Application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Grid -->
+    <section class="py-16 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold mb-8">Quick Access</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="lessons/index.html" class="academic-card glass rounded-xl p-6 border border-white/10 block">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4">
+                        <i data-lucide="play-circle" class="w-6 h-6 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Lecture Videos</h3>
+                    <p class="text-sm text-gray-400">12 modules with recorded sessions</p>
+                </a>
+
+                <a href="assignments.html" class="academic-card glass rounded-xl p-6 border border-white/10 block">
+                    <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
+                        <i data-lucide="clipboard-list" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Assignments</h3>
+                    <p class="text-sm text-gray-400">4 projects + weekly exercises</p>
+                </a>
+
+                <a href="resources.html#documentation" class="academic-card glass rounded-xl p-6 border border-white/10 block">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center mb-4">
+                        <i data-lucide="book-open" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Documentation</h3>
+                    <p class="text-sm text-gray-400">Official Django docs & guides</p>
+                </a>
+
+                <a href="resources.html#code" class="academic-card glass rounded-xl p-6 border border-white/10 block">
+                    <div class="w-12 h-12 rounded-lg bg-amber-500/20 flex items-center justify-center mb-4">
+                        <i data-lucide="github" class="w-6 h-6 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Code Repository</h3>
+                    <p class="text-sm text-gray-400">GitHub classroom & examples</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold mb-6">Course Overview</h2>
+                
+                <div class="space-y-6">
+                    <div class="glass rounded-xl p-6 border border-white/10">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i data-lucide="target" class="w-5 h-5 text-blue-400"></i>
+                            Learning Objectives
+                        </h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                                <span>Understand the Model-View-Template architecture and Django's implementation</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                                <span>Design and implement relational database schemas using Django ORM</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                                <span>Build RESTful APIs using Django REST Framework</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                                <span>Implement authentication, authorization, and security best practices</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"></i>
+                                <span>Deploy applications to production environments with CI/CD pipelines</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass rounded-xl p-6 border border-white/10">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <i data-lucide="list-checks" class="w-5 h-5 text-purple-400"></i>
+                            Prerequisites
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                                <i data-lucide="code" class="w-5 h-5 text-blue-400"></i>
+                                <span class="text-sm">Python Programming (CS-101)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                                <i data-lucide="globe" class="w-5 h-5 text-purple-400"></i>
+                                <span class="text-sm">Web Technologies (HTML/CSS/JS)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                                <i data-lucide="database" class="w-5 h-5 text-emerald-400"></i>
+                                <span class="text-sm">Database Systems (CS-302)</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                                <i data-lucide="git-branch" class="w-5 h-5 text-amber-400"></i>
+                                <span class="text-sm">Version Control (Git)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="glass rounded-xl p-6 border border-white/10 sticky top-24">
+                    <h3 class="text-xl font-semibold mb-4">Instructor</h3>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold">
+                            DR
+                        </div>
+                        <div>
+                            <p class="font-semibold">Dr. David Rodriguez</p>
+                            <p class="text-sm text-gray-400">Associate Professor</p>
+                            <p class="text-xs text-gray-500">Computer Science Dept.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2 text-sm text-gray-300">
+                            <i data-lucide="mail" class="w-4 h-4 text-gray-400"></i>
+                            <span>d.rodriguez@university.edu</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-300">
+                            <i data-lucide="clock" class="w-4 h-4 text-gray-400"></i>
+                            <span>Office Hours: Tue/Thu 2-4 PM</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-gray-400"></i>
+                            <span>Office: Tech Building 201</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-4">
+                        <h4 class="font-semibold mb-3">Teaching Assistants</h4>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-300">Sarah Chen</span>
+                                <span class="text-xs text-gray-500">schen@university.edu</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-300">Mike Johnson</span>
+                                <span class="text-xs text-gray-500">mjohnson@university.edu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <a href="#" class="flex items-center justify-center gap-2 w-full py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-sm font-medium">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            Course Forum
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Schedule Preview -->
+    <section class="py-16 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-bold">Course Schedule</h2>
+                <a href="syllabus.html" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">
+                    View Full Syllabus <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="space-y-4">
+                <div class="syllabus-week glass rounded-xl p-6 border border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-lg bg-blue-500/20 flex flex-col items-center justify-center">
+                            <span class="text-xs text-blue-400 font-bold">WEEK</span>
+                            <span class="text-2xl font-bold text-blue-400">01</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Introduction to Django</h3>
+                            <p class="text-sm text-gray-400 mt-1">MTV Architecture • Installation • First Project</p>
+                            <div class="flex gap-2 mt-2">
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded">Lecture</span>
+                                <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-400 rounded">Lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="lessons/module1/lesson1.html" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
+                        Start
+                    </a>
+                </div>
+
+                <div class="syllabus-week glass rounded-xl p-6 border border-white/10 flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-lg bg-purple-500/20 flex flex-col items-center justify-center">
+                            <span class="text-xs text-purple-400 font-bold">WEEK</span>
+                            <span class="text-2xl font-bold text-purple-400">02</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Models and Database Design</h3>
+                            <p class="text-sm text-gray-400 mt-1">ORM • Relationships • Migrations • Queries</p>
+                            <div class="flex gap-2 mt-2">
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded">Lecture</span>
+                                <span class="text-xs px-2 py-1 bg-red-500/20 text-red-400 rounded">Assignment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-sm text-gray-500">Mar 23</span>
+                </div>
+
+                <div class="syllabus-week glass rounded-xl p-6 border border-white/10 flex items-center justify-between opacity-60">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-lg bg-white/5 flex flex-col items-center justify-center">
+                            <span class="text-xs text-gray-500 font-bold">WEEK</span>
+                            <span class="text-2xl font-bold text-gray-500">03</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-400">Views and URL Routing</h3>
+                            <p class="text-sm text-gray-500 mt-1">Function Views • Class Views • URL Patterns</p>
+                        </div>
+                    </div>
+                    <span class="text-sm text-gray-500">Mar 30</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-blue-400"></i>
+                        <span class="text-lg font-bold">Django University</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Academic course materials for CS-405 Web Frameworks.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Course</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="syllabus.html" class="hover:text-white transition-colors">Syllabus</a></li>
+                        <li><a href="lessons/index.html" class="hover:text-white transition-colors">Lessons</a></li>
+                        <li><a href="assignments.html" class="hover:text-white transition-colors">Assignments</a></li>
+                        <li><a href="grades.html" class="hover:text-white transition-colors">Grades</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="resources.html#documentation" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="resources.html#tools" class="hover:text-white transition-colors">Tools</a></li>
+                        <li><a href="resources.html#reading" class="hover:text-white transition-colors">Reading List</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">GitHub Classroom</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Course Forum</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Office Hours</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Technical Support</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 University Computer Science Department. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Academic Integrity</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

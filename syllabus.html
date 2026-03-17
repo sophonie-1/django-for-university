@@ -1,0 +1,286 @@
+<!-- syllabus.html - Detailed Course Syllabus -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus - CS-405 Django University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .week-card {
+            transition: all 0.3s ease;
+        }
+        .week-card:hover {
+            transform: translateX(8px);
+            border-left-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="antialiased pb-20">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-800 rounded-lg flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">Django<span class="gradient-text">University</span></span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider">CS-405: Web Frameworks</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Overview</a>
+                    <a href="syllabus.html" class="text-sm font-medium text-white border-b-2 border-blue-500">Syllabus</a>
+                    <a href="lessons/index.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Lessons</a>
+                    <a href="assignments.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Assignments</a>
+                    <a href="resources.html" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Resources</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-4">Course Syllabus</h1>
+            <p class="text-gray-400 text-lg">CS-405: Web Development with Django • Spring 2026</p>
+        </div>
+
+        <!-- Course Info Grid -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="glass rounded-xl p-6 border border-white/10">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Credits</h3>
+                <p class="text-2xl font-bold">3.0</p>
+                <p class="text-sm text-gray-500 mt-1">Undergraduate/Graduate</p>
+            </div>
+            <div class="glass rounded-xl p-6 border border-white/10">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Duration</h3>
+                <p class="text-2xl font-bold">16 Weeks</p>
+                <p class="text-sm text-gray-500 mt-1">MWF 10:00-11:30 AM</p>
+            </div>
+            <div class="glass rounded-xl p-6 border border-white/10">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Grading</h3>
+                <p class="text-2xl font-bold">Letter Grade</p>
+                <p class="text-sm text-gray-500 mt-1">A-F Scale</p>
+            </div>
+        </div>
+
+        <!-- Weekly Schedule -->
+        <div class="space-y-4">
+            <h2 class="text-2xl font-bold mb-6">Weekly Schedule</h2>
+
+            <!-- Week 1 -->
+            <div class="week-card glass rounded-xl border border-white/10 border-l-4 border-l-blue-500 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                                <span class="text-lg font-bold text-blue-400">01</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Introduction to Django</h3>
+                                <p class="text-sm text-gray-400">Mar 16 - Mar 20</p>
+                            </div>
+                        </div>
+                        <a href="lessons/module1/lesson1.html" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
+                            View Lessons
+                        </a>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-sm text-gray-400 uppercase">Topics</h4>
+                            <ul class="space-y-1 text-sm text-gray-300">
+                                <li>• Course introduction and expectations</li>
+                                <li>• Web framework architecture (MTV)</li>
+                                <li>• Django installation and environment setup</li>
+                                <li>• Creating your first project</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-sm text-gray-400 uppercase">Readings</h4>
+                            <ul class="space-y-1 text-sm text-gray-300">
+                                <li>• <a href="https://docs.djangoproject.com/en/5.0/intro/overview/" target="_blank" class="text-blue-400 hover:underline">Django Overview (Official Docs)</a></li>
+                                <li>• <a href="https://docs.djangoproject.com/en/5.0/intro/install/" target="_blank" class="text-blue-400 hover:underline">Installation Guide</a></li>
+                                <li>• Two Scoops of Django: Ch. 1-2</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2 pt-4 border-t border-white/10">
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium">Lecture: Mon/Wed</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-medium">Lab: Fri</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium">Quiz: Friday</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="week-card glass rounded-xl border border-white/10 border-l-4 border-l-purple-500 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                                <span class="text-lg font-bold text-purple-400">02</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Models and Database Design</h3>
+                                <p class="text-sm text-gray-400">Mar 23 - Mar 27</p>
+                            </div>
+                        </div>
+                        <a href="lessons/module1/lesson2.html" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-sm font-medium transition-colors">
+                            View Lessons
+                        </a>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-sm text-gray-400 uppercase">Topics</h4>
+                            <ul class="space-y-1 text-sm text-gray-300">
+                                <li>• Django ORM fundamentals</li>
+                                <li>• Model fields and data types</li>
+                                <li>• Relationships (ForeignKey, ManyToMany)</li>
+                                <li>• Migrations and database schema</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-sm text-gray-400 uppercase">Readings</h4>
+                            <ul class="space-y-1 text-sm text-gray-300">
+                                <li>• <a href="https://docs.djangoproject.com/en/5.0/topics/db/models/" target="_blank" class="text-blue-400 hover:underline">Models Documentation</a></li>
+                                <li>• <a href="https://docs.djangoproject.com/en/5.0/topics/db/queries/" target="_blank" class="text-blue-400 hover:underline">Making Queries</a></li>
+                                <li>• Two Scoops of Django: Ch. 6-7</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2 pt-4 border-t border-white/10">
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-medium">Assignment 1 Due: Mar 27</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="week-card glass rounded-xl border border-white/10 border-l-4 border-l-pink-500 overflow-hidden opacity-75">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-pink-500/20 flex items-center justify-center">
+                                <span class="text-lg font-bold text-pink-400">03</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Views and URL Routing</h3>
+                                <p class="text-sm text-gray-400">Mar 30 - Apr 3</p>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Locked</span>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-sm text-gray-400 uppercase">Topics</h4>
+                            <ul class="space-y-1 text-sm text-gray-300">
+                                <li>• Function-based views</li>
+                                <li>• Class-based views</li>
+                                <li>• URL configuration and routing</li>
+                                <li>• Request/Response objects</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-sm text-gray-400 uppercase">Readings</h4>
+                            <ul class="space-y-1 text-sm text-gray-300">
+                                <li>• <a href="https://docs.djangoproject.com/en/5.0/topics/http/views/" target="_blank" class="text-blue-400 hover:underline">Views Documentation</a></li>
+                                <li>• <a href="https://docs.djangoproject.com/en/5.0/topics/class-based-views/" target="_blank" class="text-blue-400 hover:underline">Class-Based Views</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="week-card glass rounded-xl border border-white/10 border-l-4 border-l-amber-500 overflow-hidden opacity-75">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                                <span class="text-lg font-bold text-amber-400">04</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Templates and Frontend</h3>
+                                <p class="text-sm text-gray-400">Apr 6 - Apr 10</p>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Locked</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More weeks... -->
+            <div class="text-center py-8">
+                <button class="px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors text-sm font-medium">
+                    Load Full 16-Week Schedule
+                </button>
+            </div>
+        </div>
+
+        <!-- Grading Policy -->
+        <div class="mt-12 glass rounded-xl p-8 border border-white/10">
+            <h2 class="text-2xl font-bold mb-6">Grading Policy</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Grade Distribution</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <span>Assignments (4)</span>
+                            <span class="font-bold">40%</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <span>Midterm Project</span>
+                            <span class="font-bold">20%</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <span>Final Project</span>
+                            <span class="font-bold">25%</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <span>Participation & Quizzes</span>
+                            <span class="font-bold">15%</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Letter Grade Scale</h3>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>A</span><span>93-100%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>A-</span><span>90-92%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>B+</span><span>87-89%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>B</span><span>83-86%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>B-</span><span>80-82%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>C+</span><span>77-79%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>C</span><span>73-76%</span></div>
+                        <div class="flex justify-between p-2 bg-white/5 rounded"><span>C-</span><span>70-72%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
