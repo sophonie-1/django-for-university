@@ -1,0 +1,270 @@
+
+
+# Django University - CS-405 Course Website
+
+A professional, multi-page static website for teaching Django web development to university students. Built with modern web technologies and designed specifically for academic environments.
+
+![Django University](https://img.shields.io/badge/Django-University-green?style=for-the-badge&logo=django)
+![Course](https://img.shields.io/badge/Course-CS--405-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+
+## 📚 Overview
+
+Django University is a comprehensive course platform designed for **Sophonie.dev: Web Development with Django**. The site provides a complete learning management experience including lectures, assignments, resources, and progress tracking.
+
+### Key Features
+
+- **📖 Structured Curriculum**: 16-week course with 6 modules covering Django fundamentals to production deployment
+- **🎥 Video Integration**: Embedded lecture videos with downloadable transcripts and slides
+- **📋 Assignment Management**: GitHub Classroom integration with submission tracking and grading
+- **📚 Resource Library**: Curated documentation links, tools, and reading materials
+- **📊 Progress Tracking**: Visual progress indicators and grade monitoring
+- **📱 Responsive Design**: Fully mobile-responsive interface for learning on any device
+- **🎨 Modern UI**: Glass morphism design with dark mode aesthetic
+
+## 🗂️ Project Structure
+
+```
+django-university/
+├── index.html                 # Course landing page / dashboard
+├── syllabus.html             # Detailed 16-week course syllabus
+├── assignments.html          # Assignment submission and tracking
+├── resources.html            # Documentation, tools, and materials
+├── lessons/
+│   ├── index.html           # Lesson directory by module
+│   └── module1/
+│       ├── lesson1.html     # Individual lesson template
+│       ├── lesson2.html     # Environment setup
+│       └── lesson3.html     # First project
+├── README.md                # This file
+└── assets/                  # (Optional) Images, CSS, JS files
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Local web server (optional, for development)
+- Git (for cloning and GitHub Classroom integration)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sophonie-1/django-university.git
+   cd cs-405-django
+   ```
+
+2. **Open in browser**
+   
+   **Option A: Direct file access**
+   - Open `index.html` in your web browser
+   
+   **Option B: Local server (recommended)**
+   ```bash
+   # Python 3
+   python -m http.server 8000
+   
+   # Node.js (if installed)
+   npx serve .
+   
+   # PHP
+   php -S localhost:8000
+   ```
+   
+   Then navigate to `http://localhost:8000`
+
+3. **Customize for your institution**
+   - Update instructor information in `index.html`
+   - Modify course schedule dates in `syllabus.html`
+   - Add your GitHub Classroom links in `assignments.html`
+   - Update office hours and contact details
+
+## 📋 Course Modules
+
+| Module | Topic | Weeks | Key Concepts |
+|--------|-------|-------|--------------|
+| **01** | Introduction to Django | 1 | MTV Architecture, Setup, First Project |
+| **02** | Models & Database Design | 2-3 | ORM, Relationships, Migrations, Queries |
+| **03** | Views & URL Routing | 4-5 | Function/Class Views, URLconf, Middleware |
+| **04** | Templates & Frontend | 6-7 | DTL, Static Files, Forms, Crispy Forms |
+| **05** | Authentication & Security | 8-9 | User Auth, Permissions, CSRF, XSS Protection |
+| **06** | REST APIs & Deployment | 10-16 | DRF, Testing, CI/CD, Docker, AWS/Heroku |
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML5, CSS3 (Tailwind CSS), Vanilla JavaScript
+- **Icons**: [Lucide Icons](https://lucide.dev/)
+- **Fonts**: Inter, JetBrains Mono (Google Fonts)
+- **Styling**: Tailwind CSS (via CDN)
+- **No Backend Required**: Fully static site
+
+## 📝 Customization Guide
+
+### Changing Course Information
+
+Edit `index.html`:
+```html
+<!-- Line ~45-50 -->
+<span class="text-xs text-gray-400 uppercase tracking-wider">CS-405: Web Frameworks</span>
+
+<!-- Line ~75-80 -->
+<h1 class="text-5xl md:text-6xl font-bold mb-6">
+    CS-405: <br>
+    <span class="gradient-text">Web Development</span><br>
+    with Django
+</h1>
+```
+
+### Updating Instructor Details
+
+Edit `index.html` (around line ~180):
+```html
+<div>
+    <p class="font-semibold">Dr. David Rodriguez</p>
+    <p class="text-sm text-gray-400">Associate Professor</p>
+    <p class="text-xs text-gray-500">Computer Science Dept.</p>
+</div>
+```
+
+### Modifying Schedule Dates
+
+Edit `syllabus.html` weekly cards:
+```html
+<p class="text-sm text-gray-400">Mar 16 - Mar 20</p>
+<!-- Change to your academic calendar dates -->
+```
+
+### Adding GitHub Classroom Links
+
+Edit `assignments.html`:
+```html
+<a href="YOUR_GITHUB_CLASSROOM_LINK" class="px-6 py-3 bg-white/10...">
+    Access Repository
+</a>
+```
+
+## 🎓 Academic Integration
+
+### GitHub Classroom Setup
+
+1. Create assignments in GitHub Classroom
+2. Update links in `assignments.html`
+3. Students fork repositories directly from assignment cards
+4. Use GitHub Actions for autograding (optional)
+
+### Learning Management System (LMS) Integration
+
+This static site can be embedded in:
+- **Canvas**: Upload as zip file or host externally
+- **Blackboard**: Add as web link
+- **Moodle**: Embed via iframe or link
+- **GitHub Pages**: Host for free with custom domain
+
+### Gradebook Integration
+
+Currently manual, but can be extended with:
+- Google Sheets API for grade display
+- Canvas API integration
+- Custom JSON file for grades
+
+## 📚 Documentation Links
+
+The site includes curated links to:
+
+- [Django 5.0 Official Documentation](https://docs.djangoproject.com/en/5.0/)
+- [Django REST Framework](https://www.django-rest-framework.org/)
+- [Python 3 Documentation](https://docs.python.org/3/)
+- [MDN Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
+- [Two Scoops of Django](https://www.feldroy.com/books/two-scoops-of-django-3-x) (textbook)
+
+## 🔧 Browser Support
+
+| Browser | Version | Status |
+|---------|---------|--------|
+| Chrome | 90+ | ✅ Fully Supported |
+| Firefox | 88+ | ✅ Fully Supported |
+| Safari | 14+ | ✅ Fully Supported |
+| Edge | 90+ | ✅ Fully Supported |
+| IE 11 | - | ❌ Not Supported |
+
+## 🤝 Contributing
+
+To contribute to this course website:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-lesson`)
+3. Commit changes (`git commit -am 'Add new module on GraphQL'`)
+4. Push to branch (`git push origin feature/new-lesson`)
+5. Open a Pull Request
+
+### Content Contributions Needed
+
+- [ ] Additional code examples for each lesson
+- [ ] Quiz questions for each module
+- [ ] Video transcript text files
+- [ ] Alternative assignment ideas
+- [ ] Translation to other languages
+
+## 📄 License
+
+This project is licensed under the MIT License - see below for details:
+
+```
+MIT License
+
+Copyright (c) 2026 [University Name]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
+```
+
+**Note**: This template is provided for educational purposes. Please ensure compliance with your institution's accessibility and privacy requirements.
+
+## 🐛 Known Issues
+
+1. **Video Player**: Currently uses placeholder div. Replace with actual video embed (YouTube/Vimeo) or HTML5 video tag
+2. **Progress Tracking**: Static percentage. Connect to backend or localStorage for dynamic updates
+3. **Authentication**: No login system. Integrate with university SSO or use GitHub OAuth
+
+## 📞 Support
+
+For technical support or questions about the course:
+
+- **Course Forum**: [Link to discussion board]
+- **Email**: bukirasophonie347@gmai.com
+- **Office Hours**: Tuesday/Thursday 2-4 PM, Tech Building 201
+- **Issues**: [GitHub Issues](https://github.com/sophonie-1/django-university)
+
+## 🗺️ Roadmap
+
+- [ ] **v2.0**: Add interactive code playground (CodeMirror integration)
+- [ ] **v2.1**: Implement localStorage for progress persistence
+- [ ] **v2.2**: Add dark/light mode toggle
+- [ ] **v3.0**: Convert to React/Vue SPA with API backend
+- [ ] **v3.1**: Add real-time collaboration features
+- [ ] **v4.0**: AI-powered code review and hints
+
+## 🙏 Acknowledgments
+
+- Django Software Foundation for the excellent framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide for beautiful open source icons
+- [University Name] Computer Science Department
+
+---
+
+**Last Updated**: March 2026  
+**Course Version**: Spring 2026  
+**Maintained by**: BUkira Sophonie
+```
